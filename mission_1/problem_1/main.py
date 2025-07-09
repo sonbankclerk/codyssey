@@ -1,5 +1,3 @@
-print('Hello Mars')
-
 try:
     with open('mission_computer_main.log', 'r') as file:
         content=file.read()
