@@ -3,15 +3,15 @@ import json
 #dict to json 및 파일저장
 def dict_to_json(data, filename):
     try:
-        with open(filename, 'w', encoding='utf-8') as f:
-            json.dump(data, f)
+        with open(filename, 'w', encoding='utf-8') as jsonFile:
+            json.dump(data, jsonFile)
         print('파일 저장 완료')
         return True
     except Exception as e:
         print('파일 저장 실패')
         return False
-
-try:
+        
+try: 
     with open('mission_computer_main.log', 'r') as file:
         #콤마를 기준으로 날짜 및 시간과 로그 내용을 분류
         content = file.read()
